@@ -168,12 +168,12 @@ export const whoami = {
 
 export const why = {
   line1: 'I started IT with a goal.',
-  line2Before: 'To become a  ',
-  line2Highlight: 'fullstack dev.',
+  line2Before: 'To make a lot  ',
+  line2Highlight: 'of moneyyy.🤑🤑',
   goalTitle: 'THE GOAL',
-  goalBody: 'Learn how real software teams plan, build, ship and fix.',
+  goalBody: 'Learn a lot, and use this period to lock in on the grind.',
   notes: ['design', 'engineering'],
-  hand: 'spoiler: it worked',
+  hand: "spoiler: it didn't worked.",
 }
 
 /* ------------------------------------------------------------------ */
@@ -181,7 +181,7 @@ export const why = {
 /* ------------------------------------------------------------------ */
 
 export const roadmap = {
-  title: 'My journey to becoming ',
+  title: 'My perilous journey to becoming ',
   nodes: [
     {
       month: 'APRIL',
@@ -271,13 +271,13 @@ export const training = {
   card: {
     title: 'WEB DEV BOOTCAMP',
     rows: [
-      { k: 'ROLE', v: 'Trainer / Mentor' },
-      { k: 'TOPICS', v: '[FILL IN, e.g. HTML, CSS, JS, React]' },
-      { k: 'STUDENTS', v: '[NUMBER]' },
+      { k: 'ROLE', v: 'Trainer' },
+      { k: 'TOPICS', v: 'PHP, MYSQL, GITHUB WORKFLOWS, VERCEL DEPLOYMENTS' },
+      { k: 'STUDENTS', v: 'Bout 10' },
     ],
   },
   /** Set to null to remove the stat card. */
-  stat: { value: '[10+]', label: 'interns coordinated [REMOVE IF NOT TRUE]' } as { value: string; label: string } | null,
+  stat: { value: '10+', label: 'interns coordinated' } as { value: string; label: string } | null,
 }
 
 /* ------------------------------------------------------------------ */
@@ -318,7 +318,7 @@ export type Project = {
   callouts: { x: number; y: number; label: string }[]
   learned: string[]
   links: { label: string; href: string }[]
-  extra?: { kind: 'polaroid' | 'popup' | 'mobile'; src: string; caption: string }
+  extra?: { kind: 'polaroid' | 'popup' | 'mobile'; src: string; caption: string; w?: number; h?: number; ratio?: number }
 }
 
 export const projects: Project[] = [
@@ -330,13 +330,13 @@ export const projects: Project[] = [
     layout: 'A',
     image: '/images/projects/payflow.png',
     url: 'payflow.app',
-    meta: { role: 'Landing page + API integration (team)', stack: 'JS, APIs, Figma', buildTime: '[FILL IN]', status: '[FILL IN]', tone: 'unknown' },
+    meta: { role: 'Landing page + API integration (team)', stack: 'JS, APIs, Figma', buildTime: 'A Week', status: 'WIP', tone: 'unknown' },
     callouts: [
-      { x: 0.22, y: 0.3, label: 'Hero I designed in Figma' },
+      { x: 0.22, y: 0.3, label: 'Hero Recreated from Figma' },
       { x: 0.7, y: 0.62, label: 'Live data from the APIs' },
     ],
     learned: ['API integration', 'Working from a team roadmap', 'Swagger documentation'],
-    links: [{ label: '[LIVE LINK]', href: '#' }, { label: '[GITHUB]', href: '#' }],
+    links: [{ label: '[LIVE LINK]', href: 'https://it-liveptals.github.io/Payflow-Landing-Page/' }, { label: '[GITHUB]', href: 'https://github.com/IT-liveptals/Payflow-Landing-Page' }],
     extra: { kind: 'popup', src: '/gifs/payflow.gif', caption: 'budget_alert.gif' },
   },
   {
@@ -347,14 +347,14 @@ export const projects: Project[] = [
     layout: 'B',
     image: '/images/projects/timetrack.png',
     url: 'timetrackpro.app',
-    meta: { role: 'Landing revamp + bug fixes', stack: '[FILL IN], Tailwind, GSAP', buildTime: '[FILL IN]', status: '[FILL IN]', tone: 'unknown' },
+    meta: { role: 'Landing revamp + bug fixes', stack: 'PHP, Tailwind, GSAP', buildTime: '2 - 5 days', status: 'Completed', tone: 'unknown' },
     callouts: [
-      { x: 0.3, y: 0.25, label: 'New hero + motion' },
-      { x: 0.65, y: 0.7, label: 'Bugs squashed here' },
+      { x: 0.3, y: 0.25, label: 'Completely new approach to the layout' },
+      { x: 0.65, y: 0.7, label: 'Techy + SAAS' },
     ],
     learned: ['Working inside an existing codebase', 'Reading before writing'],
     links: [{ label: '[LIVE LINK]', href: '#' }],
-    extra: { kind: 'polaroid', src: '/images/projects/timetrack-old.png', caption: 'the old landing page' },
+    extra: { kind: 'polaroid', src: '/images/projects/timetrack-old.png', caption: 'the old landing page 🌚', w: 350, h: 220 },
   },
   {
     id: 'educore',
@@ -364,14 +364,14 @@ export const projects: Project[] = [
     layout: 'C',
     image: '/images/projects/educore.png',
     url: 'educore.app',
-    meta: { role: 'Full-stack developer', stack: 'PHP, MySQL, Bootstrap, JavaScript', buildTime: '[FILL IN]', status: 'Deployed live', tone: 'live' },
+    meta: { role: 'Full-stack developer', stack: 'PHP, MySQL, Bootstrap, JavaScript', buildTime: '2 weeks', status: 'Deployed live', tone: 'live' },
     callouts: [
       { x: 0.15, y: 0.35, label: 'Role-based dashboards' },
       { x: 0.85, y: 0.3, label: 'Results & records' },
       { x: 0.2, y: 0.8, label: 'MySQL under the hood' },
     ],
     learned: ['Full-stack architecture', 'Roles and permissions', 'Deployment'],
-    links: [{ label: '[LIVE LINK]', href: '#' }, { label: '[GITHUB]', href: '#' }],
+    links: [{ label: '[LIVE LINK]', href: 'https://educore-schools.infinityfreeapp.com/' }, { label: '[GITHUB]', href: 'https://educore-schools.infinityfreeapp.com/' }],
     extra: { kind: 'mobile', src: '/images/projects/educore-mobile.png', caption: 'mobile view' },
   },
   {
@@ -382,13 +382,13 @@ export const projects: Project[] = [
     layout: 'A',
     image: '/images/projects/bluerader.png',
     url: 'bluerader.com',
-    meta: { role: 'Rebuild, admin, database', stack: '[FILL IN]', buildTime: '[FILL IN]', status: 'Handed off for deployment', tone: 'handoff' },
+    meta: { role: 'Rebuild, admin, database', stack: 'FIGMA, PHP, MYSQL, AI APIS, SERPER.DEV', buildTime: '1 MONTH', status: 'Handed off for deployment', tone: 'handoff' },
     callouts: [
       { x: 0.25, y: 0.28, label: 'Search via Serper.dev' },
       { x: 0.72, y: 0.66, label: 'New-tool features' },
     ],
     learned: ['Shipping real software', 'Receiving feedback', 'Iterating'],
-    links: [{ label: '[LIVE LINK]', href: '#' }],
+    links: [{ label: '[LIVE LINK]', href: 'https://bluerader.com/' }],
     // extra: { kind: 'popup', src: '/gifs/hackathon.mp4', caption: 'hackathon_demo.mp4' },
     extra: { kind: 'polaroid', src: '/images/people/hackathon.png', caption: 'the hackathon' },
   },
@@ -400,14 +400,14 @@ export const projects: Project[] = [
     layout: 'B',
     image: '/images/projects/schoolpetal.png',
     url: 'schoolpetal.com',
-    meta: { role: 'Design + build', stack: '[FILL IN]', buildTime: '[FILL IN]', status: '[FILL IN]', tone: 'unknown' },
+    meta: { role: 'Design + build', stack: 'Figma, Php,Adobe Illustrator', buildTime: '1 WEEK', status: 'Handed off for deployment', tone: 'unknown' },
     callouts: [
       { x: 0.3, y: 0.3, label: 'Figma to code, 1:1' },
       { x: 0.7, y: 0.72, label: 'Feature sections' },
     ],
     learned: ['Designing for a brand that is not mine', 'Letting go of an idea'],
-    links: [{ label: '[LIVE LINK]', href: '#' }],
-    extra: { kind: 'polaroid', src: '/images/projects/schoolpetal-logo.png', caption: 'first concept wasnt accepted, still cooked' },
+    links: [{ label: '[LIVE LINK]', href: 'https://www.schoolpetal.com/' }],
+    extra: { kind: 'polaroid', src: '/images/projects/schoolpetal-logo.png', caption: "really cooked this. Wasn't accepted 🤦🏻" },
   },
   {
     id: 'cms',
@@ -417,14 +417,14 @@ export const projects: Project[] = [
     layout: 'C',
     image: '/images/projects/cms.png',
     url: 'cms.livepetal.com',
-    meta: { role: '[FILL IN]', stack: '[FILL IN]', buildTime: '[FILL IN]', status: '[FILL IN]', tone: 'wip' },
+    meta: { role: 'Design + build', stack: 'React.JS, Next.JS, Supabase, Tailwind CSS', buildTime: 'WIP', status: 'WIP', tone: 'wip' },
     callouts: [
       { x: 0.18, y: 0.3, label: 'AI drafts posts' },
-      { x: 0.82, y: 0.4, label: 'Schedule & approve' },
-      { x: 0.78, y: 0.82, label: '[FILL IN]' },
+      // { x: 0.82, y: 0.4, label: 'Schedule & approve' },
+      { x: 0.78, y: 0.82, label: 'Automated simultaneous content posting' },
     ],
-    learned: ['[FILL IN]'],
-    links: [{ label: '[LINK]', href: '#' }],
+    learned: ['Laravel'],
+    links: [{ label: '[LINK: WIP]', href: '#' }],
     extra: { kind: 'mobile', src: '/images/projects/cms-mobile.png', caption: 'on the go' },
   },
 ]
@@ -446,7 +446,7 @@ export const smallerBuilds = {
 export const personalBuilds = {
   fig: '10',
   title: 'Personal builds',
-  sub: 'Built on my own time to master GSAP and React.',
+  sub: 'Sidequest to master GSAP and React. Yes, you might have some on youtube, but these are 100% mine. 🌚',
   items: [
     { name: 'SPYLT', stack: ['REACT', 'GSAP'], src: '/images/projects/spylt.png', href: '#' },
     { name: 'MOJITO', stack: ['REACT', 'GSAP'], src: '/images/projects/mojito.png', href: '#' },
@@ -463,9 +463,9 @@ export const oops = {
   word: 'issues.',
   script: '1 faced',
   notes: [
-    { wrong: 'My SchoolPetal logo was rejected.', taught: 'Design is for the user, not for me.' },
-    { wrong: "I went into the hackathon unsure whether I'd win.", taught: 'I didnt win seh 😅😅' },
-    { wrong: 'Financial challenges. 🌚🌚🌚', taught: '[WHAT IT TAUGHT YOU]' },
+    { wrong: 'I battled depression because I was broke the whole time. 🫠', taught: 'I definitely need to lock innn. 🤞🏻' },
+    { wrong: "As per I think I sabi work, I went into the hackathon somewhat expecting I'd win. 😮‍💨", taught: "I didn't win seh 😅😅" },
+    { wrong: 'Omorr... na money still dey my mind. 🌚🌚🌚', taught: '...' },
   ],
 }
 
@@ -487,7 +487,7 @@ export const aprVsOct = {
 
 export const gratitude = {
   label: 'Thank you.',
-  card: { title: 'TO EVERYONE', body: "To everyone who answered my 'quick question'." },
+  card: { title: 'TO EVERYONE', body: "You guys def made me feel special.💙" },
   people: [
     { role: '[MANAGER]', note: 'Excellence', src: '/images/people/manager.jpg' },
     { role: '[HR]', note: 'Discipline', src: '/images/people/HR.jpg' },
@@ -502,7 +502,7 @@ export const gratitude = {
 
 export const whatsNext = {
   title: 'Version 2.0.',
-  items: ['LARAVEL', 'CLOUD ENGINEERING (ALTSCHOOL)', 'BUILDING [YOUR NEXT BIG PROJECT]', 'MORE CREATIVE CODE'],
+  items: [ 'CLOUD ENGINEERING', 'MORE CREATIVE CODE','MONEYYY', '5 dots... amen 😁'],
   gif: { src: '/gifs/next.gif', title: 'next' },
 }
 
@@ -511,7 +511,7 @@ export const finale = {
     '> internship.complete()',
     '> skills.updated',
     '> confidence.increased',
-    '> friends.made: many',
+    '> friends.made: many ( {red:- Heskay 😑} )',
     '> ready.for.next.challenge',
   ],
   thanks: 'Thank you.',

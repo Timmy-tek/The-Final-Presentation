@@ -48,7 +48,7 @@ export function AprVsOctSlide() {
 
       <div className="absolute top-[470px] left-[1160px]">
         <Hand className="text-[48px] text-ink" rot={-4}>
-          same person, new toolkit
+          same person, new utility belt 🦇
         </Hand>
       </div>
 

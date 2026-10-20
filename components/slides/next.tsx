@@ -12,7 +12,7 @@ export function NextSlide() {
   return (
     <Slide surface="paper">
       <div className="absolute top-[132px] left-[96px]">
-        <MonoLabel>WHAT&apos;S NEXT / LOADING</MonoLabel>
+        <MonoLabel>WHAT&apos;S NEXT / I actually no sabi</MonoLabel>
       </div>
       <Lines
         className="absolute top-[180px] left-[88px] font-display text-[180px] leading-[0.9] tracking-[-0.04em]"

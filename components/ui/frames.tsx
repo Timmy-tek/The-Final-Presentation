@@ -14,6 +14,7 @@ export function Polaroid({
   src,
   caption,
   w = 300,
+  h,
   ratio = 1,
   tape = true,
   tapeRot = -4,
@@ -25,6 +26,7 @@ export function Polaroid({
   caption?: string
   note?: string
   w?: number
+  h?: number
   ratio?: number
   tape?: boolean
   tapeRot?: number
@@ -38,8 +40,8 @@ export function Polaroid({
         src={src}
         alt={alt ?? caption ?? ''}
         className="w-full"
-        style={{ aspectRatio: `1 / ${ratio}` }}
-        hint={`${Math.round(w * 2)} x ${Math.round(w * 2 * ratio)}`}
+        style={h ? { height: h } : { aspectRatio: `1 / ${ratio}` }}
+        hint={`${Math.round(w * 2)} x ${Math.round(h ? h * 2 : w * 2 * ratio)}`}
       />
       <figcaption className="flex min-h-[64px] flex-col justify-center gap-1 px-1 py-2 font-hand text-[28px] leading-none font-bold text-ink">
         {caption ? (

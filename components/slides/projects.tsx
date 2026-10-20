@@ -30,7 +30,7 @@ export function ProjectsSlide() {
         return (
           <Sticker key={t.name} x={s.x} y={s.y} rot={s.rot} depth={0.6 + (i % 4) * 0.25} dieCut={false} label={t.name}>
             <div className="group relative transition-transform duration-200 hover:scale-[1.08]">
-              <div className="overflow-hidden rounded-[18px] border-[10px] border-white bg-white shadow-[0_14px_30px_rgba(0,0,0,0.45)]">
+              <div className="overflow-hidden rounded-[18px] border-[5px] border-white bg-white shadow-[0_14px_30px_rgba(0,0,0,0.45)]">
                 <Media src={t.src} alt={t.name} className="rounded-[8px]" style={{ width: s.w - 20, height: (s.w - 20) * 0.62 }} />
               </div>
               <span className="pointer-events-none absolute -bottom-4 left-4 opacity-0 transition-opacity duration-200 group-hover:opacity-100">

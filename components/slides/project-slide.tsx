@@ -98,7 +98,7 @@ function Extra({ project, at }: { project: Project; at: { x: number; y: number }
   if (e.kind === 'polaroid')
     return (
       <Sticker x={at.x} y={at.y} rot={-6} depth={1.3} dieCut={false}>
-        <Polaroid src={e.src} caption={e.caption} w={250} ratio={0.8} alt={e.caption} />
+        <Polaroid src={e.src} caption={e.caption} w={e.w ?? 250} h={e.h} ratio={e.ratio ?? 0.8} alt={e.caption} />
       </Sticker>
     )
   return (

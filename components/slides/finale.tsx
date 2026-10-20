@@ -1,6 +1,7 @@
 import { Slide } from '@/components/deck/slide'
 import { MonoLabel } from '@/components/ui/bits'
 import { WindowControls } from '@/components/ui/doodles'
+import { Txt } from '@/components/ui/txt'
 import { finale } from '@/data/slides'
 import { RowNumbers } from './shared'
 
@@ -26,7 +27,7 @@ export function FinaleSlide() {
         <ul className="flex flex-col gap-4 p-8 font-mono text-[34px] leading-tight text-cream">
           {finale.lines.map((line, i) => (
             <li key={line} data-step={i + 1} data-step-plain className={i === finale.lines.length - 1 ? 'text-lime' : undefined}>
-              {line}
+              <Txt>{line}</Txt>
             </li>
           ))}
           <li aria-hidden className="text-yellow">

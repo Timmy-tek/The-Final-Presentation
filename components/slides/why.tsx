@@ -20,7 +20,7 @@ export function WhySlide() {
             {first} {rest.join(' ')}
           </span>,
           <span key="b">{why.line2Before.trim()}</span>,
-          <span key="c" className="relative inline-block text-[length:100px]">
+          <span key="c" className="relative inline-block text-[length:120px]">
             <span
               data-anim="wipe"
               aria-hidden
@@ -48,8 +48,11 @@ export function WhySlide() {
         {/*<HandArrow w={130} h={74} flip className="-scale-y-100" />*/}
         <Hand className="text-[56px] text-ink" rot={-5}>
           {why.hand}
+            <br/>
+            <span className=" text-[length:40px]"> I became a fullstack dev instead 🤦🏻</span>
         </Hand>
       </div>
+
     </Slide>
   )
 }
