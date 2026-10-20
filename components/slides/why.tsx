@@ -20,11 +20,11 @@ export function WhySlide() {
             {first} {rest.join(' ')}
           </span>,
           <span key="b">{why.line2Before.trim()}</span>,
-          <span key="c" className="relative inline-block">
+          <span key="c" className="relative inline-block text-[length:100px]">
             <span
               data-anim="wipe"
               aria-hidden
-              className="absolute inset-x-[-0.08em] bottom-[0.1em] -z-10 h-[0.42em] bg-yellow"
+              className="absolute inset-x-[-0.08em] bottom-[0.1em] -z-10 h-[0.42em] bg-yellow "
             />
             {why.line2Highlight}
           </span>,
@@ -45,7 +45,7 @@ export function WhySlide() {
       </Callout>
 
       <div className="absolute top-[740px] left-[620px] flex items-center gap-2">
-        <HandArrow w={130} h={74} flip className="-scale-y-100" />
+        {/*<HandArrow w={130} h={74} flip className="-scale-y-100" />*/}
         <Hand className="text-[56px] text-ink" rot={-5}>
           {why.hand}
         </Hand>

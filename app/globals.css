@@ -19,7 +19,7 @@
   --ui-fg: var(--cream);
 }
 
-@theme inline {
+@theme inline {  
   --color-mat: var(--mat);
   --color-mat-line: var(--mat-line);
   --color-brown: var(--brown);

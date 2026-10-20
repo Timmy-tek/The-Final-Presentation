@@ -118,6 +118,7 @@ export function CoverSlide() {
       <LabelBlock tone="yellow" rot={3} tape="tr" className="absolute top-[598px] left-[1030px] px-8 pt-1 pb-3">
         <span aria-hidden className="block text-[128px] leading-none">
           {presenter.firstName.toUpperCase()}
+          {/*  TECH BRO*/}
         </span>
       </LabelBlock>
 

@@ -57,8 +57,8 @@ export type SlideMeta = {
 export const slides: SlideMeta[] = [
   { id: 'cover', title: 'The Journey', chapter: 'opening', surface: 'mat' },
   { id: 'index', title: 'Index', chapter: 'opening', surface: 'paper' },
-  { id: 'before', title: 'Who I was', chapter: 'before', surface: 'mat' },
   { id: 'whoami', title: 'Timmy', chapter: 'before', surface: 'paper' },
+  { id: 'before', title: 'Who I was', chapter: 'before', surface: 'mat' },
   { id: 'why', title: 'Why LivePetal', chapter: 'before', surface: 'paper' },
   {
     id: 'roadmap',
@@ -95,7 +95,7 @@ export const presenter = {
   wordmark: 'TIMMY',
   firstName: 'Timothy',
   lastName: 'Adegbola',
-  handle: '@timmytekx',
+  handle: '@timmy-tek',
   tagline: '/ making the world look better /',
   status: 'AVAILABLE',
   city: 'AKURE, NG',
@@ -117,7 +117,7 @@ export const presenter = {
 export const cover = {
   kicker: 'The',
   title: 'Journey',
-  captionTop: 'six months in the life of',
+  captionTop: '6 months in the life of a tech bro',
   captionBottom: 'april to october 2026',
   thumbs: [
     { src: '/images/projects/bluerader.png', caption: 'my first live project', label: 'Bluerader' },
@@ -127,7 +127,7 @@ export const cover = {
 
 export const index = {
   rows: [
-    { num: '01', title: 'The Beginning', meta: 'Before / Who I am / Why LivePetal' },
+    { num: '01', title: 'The Beginning', meta: 'Who I am / Before / Why LivePetal' },
     { num: '02', title: 'Becoming an Engineer', meta: 'Roadmap / What changed / Tech' },
     { num: '03', title: 'Beyond Code', meta: 'Teamwork / Mentoring / Training' },
     { num: '04', title: 'Selected Work', meta: '10+ projects / Live / Personal' },
@@ -146,10 +146,10 @@ export const before = {
   note: 'before the internship...',
   label: 'Who I was',
   items: [
-    { kind: 'photoshop', tag: 'PHOTOSHOP', line: 'Photo manipulation & posters' },
-    { kind: 'illustration', tag: 'ILLUSTRATION', line: 'Digital art & characters', src: '/images/art/illustration.png' },
-    { kind: 'game', tag: 'GAME ASSETS', line: 'Sprites, tiles & props', src: '/images/art/game-asset.png' },
-    { kind: 'ui', tag: 'UI/UX', line: 'Screens in Figma' },
+    { kind: 'photoshop', tag: 'PHOTOSHOP', line: 'Graphics Designer - for church' },
+    { kind: 'illustration', tag: 'ILLUSTRATION', line: 'Struggling Digital Artist 🌚', src: '/images/art/illustration.png' },
+    { kind: 'game', tag: 'GAME ASSETS', line: 'Freelancer as a Game assets creator', src: '/images/art/game-asset.png' },
+    { kind: 'ui', tag: 'UI/UX', line: 'UIUX designer - never paid 🤣' },
   ] as const,
 }
 
@@ -167,9 +167,9 @@ export const whoami = {
 }
 
 export const why = {
-  line1: 'I could design interfaces.',
-  line2Before: 'I wanted to learn how they become ',
-  line2Highlight: 'products.',
+  line1: 'I started IT with a goal.',
+  line2Before: 'To become a  ',
+  line2Highlight: 'fullstack dev.',
   goalTitle: 'THE GOAL',
   goalBody: 'Learn how real software teams plan, build, ship and fix.',
   notes: ['design', 'engineering'],
@@ -181,7 +181,7 @@ export const why = {
 /* ------------------------------------------------------------------ */
 
 export const roadmap = {
-  title: 'The Roadmap',
+  title: 'My journey to becoming ',
   nodes: [
     {
       month: 'APRIL',
@@ -212,27 +212,28 @@ export const roadmap = {
 export type CardTone = 'orange' | 'purple' | 'lime' | 'ink' | 'white'
 
 export const changed = {
-  title: ['Every skill answered one question:', 'what changed?'],
+  title: ['Every skill I learnt here', 'Transformed Me'],
   cards: [
     { skill: 'React', before: 'Static pages', after: 'Interactive apps', tone: 'orange' },
-    { skill: 'APIs', before: 'Consuming data visually', after: 'Understanding how systems talk', tone: 'purple' },
+    { skill: 'APIs', before: 'Watching tutorial vids nonstop', after: 'Building stuff People actually use', tone: 'purple' },
     { skill: 'Git & GitHub', before: 'Working alone', after: 'Collaborating like a team', tone: 'lime' },
     { skill: 'PHP & MySQL', before: 'Frontend only', after: 'Full-stack products', tone: 'ink' },
-    { skill: 'Deployment', before: 'It works on my laptop', after: 'It works for everyone', tone: 'white' },
+    { skill: 'Deployment', before: 'a lot of things', after: 'A Confident Computer Scientist. 🤩', tone: 'white' },
   ] satisfies { skill: string; before: string; after: string; tone: CardTone }[],
 }
 
 export const tech = {
-  title: 'Tech I learned',
+  title: 'Tech I learned/ Built upon',
   columns: [
     { name: 'FRONTEND', items: ['HTML / CSS', 'JavaScript', 'Tailwind', 'React', 'Next.js', 'GSAP'] },
-    { name: 'BACKEND', items: ['PHP', 'MySQL', 'Node.js intro', 'Laravel intro', 'REST APIs', 'JSON'] },
+    { name: 'BACKEND', items: ['PHP', 'MySQL', 'Node.js', 'Laravel', 'REST APIs', 'JSON'] },
     { name: 'TOOLS', items: ['Git', 'GitHub', 'Postman', 'Swagger', 'Figma', 'VS Code'] },
     { name: 'DESIGN', items: ['Photoshop', 'Figma', 'Wireframes', 'Design systems'] },
   ],
   popups: [
-    { src: '/gifs/gsap-demo-1.gif', title: 'gsap_demo_01' },
-    { src: '/gifs/gsap-demo-2.mp4', title: 'gsap_demo_02' },
+    { src: '/images/projects/code.gif', title: 'code_demo_01' },
+    { src: '/images/projects/code 2.gif', title: 'code_demo_01' },
+    // { src: '/gifs/gsap-demo-2.mp4', title: 'gsap_demo_02' },
   ],
 }
 
@@ -242,27 +243,28 @@ export const tech = {
 
 export const beyond = {
   label: 'Beyond code',
-  note: 'the lessons nobody grades',
+  note: 'the lessons going on in the backend',
   cards: [
     {
       icon: 'team',
       title: 'Teamwork',
-      story: '[EDIT TO A REAL STORY] One bug sometimes needed three people from three departments.',
+      story: '[Big Shoutout to TEAM TITANS] The team behind Payflow. ✨✨✨✨✨✨',
     },
-    { icon: 'talk', title: 'Communication', story: 'I presented almost every week, and learned to explain what I built.' },
-    { icon: 'mentor', title: 'Mentoring', story: 'I taught Tailwind, PHP forms and frontend concepts to fellow interns.' },
+    { icon: 'talk', title: 'Communication', story: 'We presented almost every week, and learned to explain what we built.' },
+    { icon: 'mentor', title: 'Mentoring', story: 'I taught, and I was Taught' },
     {
       icon: 'flag',
-      title: 'Ownership',
-      story: 'From a rejected logo to a shipped product, I learned to finish things.',
+      title: 'Excellence',
+      story: 'I learned to finish things.',
     },
   ] as const,
 }
 
 export const training = {
-  title: ['From learner', 'to teacher.'],
+  // title: ['From learner', 'to teacher.'],
+  title: ['From learning ...'],
   photos: [
-    { src: '/images/people/bootcamp-1.jpg', caption: 'bootcamp, day one' },
+    { src: '/images/people/bootcamp-1.jpg', caption: 'bootcamp, day something' },
     { src: '/images/people/bootcamp-2.jpg', caption: 'live coding' },
     { src: '/images/people/bootcamp-3.jpg', caption: 'the class' },
   ],
@@ -294,7 +296,7 @@ export const projectsOverview = {
     { name: 'AI CMS', src: '/images/projects/cms.png' },
     { name: 'MonieMe', src: '/images/projects/monieme.png' },
     { name: 'Cinemax', src: '/images/projects/cinemax.png' },
-    { name: 'Weather', src: '/images/projects/weather.png' },
+    { name: 'Devflow', src: '/images/projects/devflow.png' },
     { name: 'SPYLT', src: '/images/projects/spylt.png' },
     { name: 'Mojito', src: '/images/projects/mojito.png' },
     { name: 'Codeflow', src: '/images/projects/codeflow.png' },
@@ -324,7 +326,7 @@ export const projects: Project[] = [
     id: 'payflow',
     fig: '03',
     title: 'Payflow',
-    what: 'Expense tracking with monthly budgets per category, spending charts and alerts near budget limits. I designed and built the landing page and integrated multiple APIs.',
+    what: 'A simple landing page, but The very first collaborative Project Ive ever done. Under the excellent leadership of Mr. Kenni. 🌚 TEAM TITANS !!',
     layout: 'A',
     image: '/images/projects/payflow.png',
     url: 'payflow.app',
@@ -341,7 +343,7 @@ export const projects: Project[] = [
     id: 'timetrack',
     fig: '04',
     title: 'Timetrack Pro',
-    what: 'A company time-tracking platform. I revamped the landing page and fixed bugs across the platform.',
+    what: "My proposed landing page Design for the company's Timetrack Pro website. Wasn't utilized, but I learnt Speed matters in development 😅",
     layout: 'B',
     image: '/images/projects/timetrack.png',
     url: 'timetrackpro.app',
@@ -358,7 +360,7 @@ export const projects: Project[] = [
     id: 'educore',
     fig: '05',
     title: 'Educore',
-    what: 'A multi-role school management platform for admins, teachers and students. Deployed live.',
+    what: 'First time building a Complete - Fullstack Web Software. Collaborated with Mr. Kenni on this.',
     layout: 'C',
     image: '/images/projects/educore.png',
     url: 'educore.app',
@@ -387,7 +389,8 @@ export const projects: Project[] = [
     ],
     learned: ['Shipping real software', 'Receiving feedback', 'Iterating'],
     links: [{ label: '[LIVE LINK]', href: '#' }],
-    extra: { kind: 'popup', src: '/gifs/hackathon.mp4', caption: 'hackathon_demo.mp4' },
+    // extra: { kind: 'popup', src: '/gifs/hackathon.mp4', caption: 'hackathon_demo.mp4' },
+    extra: { kind: 'polaroid', src: '/images/people/hackathon.png', caption: 'the hackathon' },
   },
   {
     id: 'schoolpetal',
@@ -404,7 +407,7 @@ export const projects: Project[] = [
     ],
     learned: ['Designing for a brand that is not mine', 'Letting go of an idea'],
     links: [{ label: '[LIVE LINK]', href: '#' }],
-    extra: { kind: 'polaroid', src: '/images/projects/schoolpetal-logo.png', caption: 'not accepted, still proud' },
+    extra: { kind: 'polaroid', src: '/images/projects/schoolpetal-logo.png', caption: 'first concept wasnt accepted, still cooked' },
   },
   {
     id: 'cms',
@@ -434,9 +437,9 @@ export const smallerBuilds = {
     { name: 'MonieMe', caption: 'Loan app: wallets, KYC, Paystack test mode', stack: 'PHP, MySQL', src: '/images/projects/monieme.png', tone: 'shipped' },
     { name: 'Weather', caption: 'Weather app on a public API', stack: 'JS, API', src: '/images/projects/weather.png', tone: 'live' },
     { name: 'Cinemax', caption: 'Movie finder', stack: 'JS, API', src: '/images/projects/cinemax.png', tone: 'live' },
-    { name: 'Country', caption: 'Country details explorer', stack: 'JS, API', src: '/images/projects/country.png', tone: 'live' },
-    { name: 'Quiz', caption: 'Vanilla-JS quiz app', stack: 'HTML, CSS, JS', src: '/images/projects/quiz.png', tone: 'shipped' },
-    { name: 'Blog', caption: 'My first blog page', stack: 'HTML, CSS', src: '/images/projects/blog.png', tone: 'shipped' },
+    // { name: 'Country', caption: 'Country details explorer', stack: 'JS, API', src: '/images/projects/country.png', tone: 'live' },
+    // { name: 'Quiz', caption: 'Vanilla-JS quiz app', stack: 'HTML, CSS, JS', src: '/images/projects/quiz.png', tone: 'shipped' },
+    // { name: 'Blog', caption: 'My first blog page', stack: 'HTML, CSS', src: '/images/projects/blog.png', tone: 'shipped' },
   ] satisfies { name: string; caption: string; stack: string; src: string; tone: StatusTone }[],
 }
 
@@ -457,12 +460,12 @@ export const personalBuilds = {
 /* ------------------------------------------------------------------ */
 
 export const oops = {
-  word: 'Oops.',
-  script: 'learned',
+  word: 'issues.',
+  script: '1 faced',
   notes: [
     { wrong: 'My SchoolPetal logo was rejected.', taught: 'Design is for the user, not for me.' },
-    { wrong: "I went into the hackathon unsure whether I'd win.", taught: 'Ship, present, learn.' },
-    { wrong: '[ADD YOUR OWN: a deployment bug, a broken build, a long debugging night]', taught: '[WHAT IT TAUGHT YOU]' },
+    { wrong: "I went into the hackathon unsure whether I'd win.", taught: 'I didnt win seh 😅😅' },
+    { wrong: 'Financial challenges. 🌚🌚🌚', taught: '[WHAT IT TAUGHT YOU]' },
   ],
 }
 
@@ -473,8 +476,8 @@ export const aprVsOct = {
   stats: [
     { value: '6', suffix: '', label: 'months' },
     { value: '10', suffix: '+', label: 'projects built' },
-    { value: '[NUMBER]', suffix: '', label: 'weekly presentations given' },
-    { value: '[NUMBER]', suffix: '', label: 'students trained' },
+    { value: '15 +', suffix: '', label: 'weekly presentations given' },
+    { value: '10 +', suffix: '', label: 'people trained' },
   ],
 }
 
@@ -486,13 +489,14 @@ export const gratitude = {
   label: 'Thank you.',
   card: { title: 'TO EVERYONE', body: "To everyone who answered my 'quick question'." },
   people: [
-    { role: '[MANAGER]', note: '[what they taught me]', src: '/images/people/manager.jpg' },
-    { role: '[SUPERVISOR]', note: '[what they taught me]', src: '/images/people/supervisor.jpg' },
-    { role: '[TEAM LEAD]', note: '[what they taught me]', src: '/images/people/team-lead.jpg' },
-    { role: '[FELLOW INTERNS]', note: '[what they did]', src: '/images/people/interns.jpg' },
-    { role: '[BOOTCAMP STUDENTS]', note: '[what they did]', src: '/images/people/students.jpg' },
-    { role: '[SCHOOL SUPERVISOR]', note: '[what they taught me]', src: '/images/people/school-supervisor.jpg' },
-    { role: '[FAMILY]', note: '[for everything]', src: '/images/people/family.jpg' },
+    { role: '[MANAGER]', note: 'Excellence', src: '/images/people/manager.jpg' },
+    { role: '[HR]', note: 'Discipline', src: '/images/people/HR.jpg' },
+    { role: '[SUPERVISOR]', note: 'Php and everything in between', src: '/images/people/supervisor.jpg' },
+    { role: '[MARKETING LEAD]', note: ' ', src: '/images/people/market.jpg' },
+    { role: '[FELLOW INTERNS]', note: ' ', src: '/images/people/interns.jpg' },
+    { role: '[BOOTCAMP STUDENTS]', note: ' ', src: '/images/people/students.jpg' },
+    { role: '[STUDENTS]', note: ' ', src: '/images/people/students2.jpg' },
+    { role: '[INTERNS]', note: ' ', src: '/images/people/family.jpg' },
   ],
 }
 

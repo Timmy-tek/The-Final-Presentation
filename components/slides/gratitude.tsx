@@ -13,6 +13,7 @@ const SPOTS = [
   { x: 900, y: 560, rot: 5, depth: 1.2 },
   { x: 1200, y: 600, rot: -5, depth: 0.9 },
   { x: 1500, y: 580, rot: 3, depth: 1.4 },
+  { x: 1750, y: 520, rot: -4, depth: 1.1 },
 ]
 
 export function GratitudeSlide() {

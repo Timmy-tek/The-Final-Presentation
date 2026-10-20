@@ -16,7 +16,7 @@ export function TrainingSlide() {
   return (
     <Slide surface="paper">
       <div className="absolute top-[132px] left-[96px]">
-        <MonoLabel>MENTORING / SEPTEMBER</MonoLabel>
+        <MonoLabel>MENTORING / October</MonoLabel>
       </div>
       <Lines
         className="absolute top-[180px] left-[88px] font-display text-[132px] leading-[0.92] tracking-[-0.03em]"

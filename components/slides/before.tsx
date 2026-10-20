@@ -66,7 +66,7 @@ export function BeforeSlide() {
             </Sticker>
           </div>
           <Tag tone="yellow" size="lg">{`[ ${item.tag} ]`}</Tag>
-          <p className="font-sticker text-[26px] font-medium text-cream">{item.line}</p>
+          <p className="font-sticker text-[26px] font-medium text-cream text-center">{item.line}</p>
         </div>
       ))}
     </Slide>
