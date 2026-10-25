@@ -47,7 +47,7 @@ export function GratitudeSlide() {
 
       {/* Gallery Stack */}
       <div className="absolute inset-0 flex items-center justify-center pt-[100px]">
-        <div className="relative w-[1000px] h-[550px]">
+        <div className="relative w-[1100px] h-[600px]">
           {gratitude.gallery?.map((item: any, i: number) => {
             const x = item.x ?? 0
             const y = item.y ?? 0
@@ -59,7 +59,8 @@ export function GratitudeSlide() {
                 data-anim="block"
                 data-step={i + 1}
                 data-rot={rot}
-                className="absolute inset-0 bg-[#F9F7F2] border-[15px] border-white shadow-2xl flex p-10 gap-10"
+                className="absolute inset-0 bg-[#F9F7F2] border-[10px] border-white shadow-2xl flex p-10 gap-10"
+                // className="absolute inset-0 bg-black border-[15px] border-white shadow-2xl flex p-10 gap-10"
                 style={{
                   translate: `${x}px ${y}px`,
                   zIndex: 100 + i,
