@@ -19,7 +19,8 @@ function stepEls(slide: HTMLElement, step: number) {
 export function setSteps(slide: HTMLElement, revealed: number) {
   own(slide, '[data-step]').forEach((el) => {
     const s = Number(el.dataset.step) || 0
-    gsap.set(el, s <= revealed ? { autoAlpha: 1, y: 0, scale: 1, rotation: 0 } : { autoAlpha: 0 })
+    const targetRot = Number(el.dataset.rot) || 0
+    gsap.set(el, s <= revealed ? { autoAlpha: 1, y: 0, scale: 1, rotation: targetRot } : { autoAlpha: 0 })
   })
   slide.dataset.revealed = String(revealed)
 }
@@ -38,8 +39,16 @@ export function revealStep(slide: HTMLElement, step: number, reduced: boolean) {
   if (popped.length)
     tl.fromTo(
       popped,
-      { autoAlpha: 0, y: 40, scale: 0.92, rotation: () => gsap.utils.random(-5, 5) },
-      { autoAlpha: 1, y: 0, scale: 1, rotation: 0, duration: 0.6, ease: 'back.out(1.4)', stagger: 0.08 },
+      { autoAlpha: 0, y: 40, scale: 0.92, rotation: (i, el) => (Number(el.dataset.rot) || 0) + gsap.utils.random(-5, 5) },
+      {
+        autoAlpha: 1,
+        y: 0,
+        scale: 1,
+        rotation: (i, el) => Number(el.dataset.rot) || 0,
+        duration: 0.6,
+        ease: 'back.out(1.4)',
+        stagger: 0.08,
+      },
       0,
     )
   const spins = els.flatMap((el) => q(el, '[data-step-spin]'))
@@ -93,30 +102,53 @@ export function buildEnter(slide: HTMLElement, opts: { reduced: boolean }) {
   const lines = own(slide, '[data-anim="line"]')
   if (lines.length) tl.fromTo(lines, { yPercent: 110 }, { yPercent: 0, duration: 0.8, stagger: 0.08 }, 0.05)
 
-  const blocks = own(slide, '[data-anim="block"]')
+  const blocks = own(slide, '[data-anim="block"]').filter((el) => !el.closest('[data-step]'))
   if (blocks.length)
     tl.fromTo(
       blocks,
-      { autoAlpha: 0, scale: 1.25, y: -30, rotation: () => gsap.utils.random(-10, 10) },
-      { autoAlpha: 1, scale: 1, y: 0, rotation: 0, duration: 0.55, ease: 'back.out(1.3)', stagger: 0.12 },
+      { autoAlpha: 0, scale: 1.25, y: -30, rotation: (i, el) => (Number(el.dataset.rot) || 0) + gsap.utils.random(-10, 10) },
+      {
+        autoAlpha: 1,
+        scale: 1,
+        y: 0,
+        rotation: (i, el) => Number(el.dataset.rot) || 0,
+        duration: 0.55,
+        ease: 'back.out(1.3)',
+        stagger: 0.12,
+      },
       0.05,
     )
 
-  const tapes = own(slide, '[data-anim="tape"]')
+  const tapes = own(slide, '[data-anim="tape"]').filter((el) => !el.closest('[data-step]'))
   if (tapes.length)
     tl.fromTo(
       tapes,
-      { autoAlpha: 0, scale: 1.4, rotation: () => gsap.utils.random(-25, 25) },
-      { autoAlpha: 1, scale: 1, rotation: 0, duration: 0.3, ease: 'power4.out', stagger: 0.05 },
+      { autoAlpha: 0, scale: 1.4, rotation: (i, el) => (Number(el.dataset.rot) || 0) + gsap.utils.random(-25, 25) },
+      {
+        autoAlpha: 1,
+        scale: 1,
+        rotation: (i, el) => Number(el.dataset.rot) || 0,
+        duration: 0.3,
+        ease: 'power4.out',
+        stagger: 0.05,
+      },
       0.35,
     )
 
-  const stickers = own(slide, '[data-anim="sticker"]')
+  const stickers = own(slide, '[data-anim="sticker"]').filter((el) => !el.closest('[data-step]'))
   if (stickers.length)
     tl.fromTo(
       stickers,
-      { autoAlpha: 0, scale: 0.6, y: 40, rotation: () => gsap.utils.random(-14, 14) },
-      { autoAlpha: 1, scale: 1, y: 0, rotation: 0, duration: 0.7, ease: EASE.pop, stagger: 0.07 },
+      { autoAlpha: 0, scale: 0.6, y: 40, rotation: (i, el) => (Number(el.dataset.rot) || 0) + gsap.utils.random(-14, 14) },
+      {
+        autoAlpha: 1,
+        scale: 1,
+        y: 0,
+        rotation: (i, el) => Number(el.dataset.rot) || 0,
+        duration: 0.7,
+        ease: EASE.pop,
+        stagger: 0.07,
+      },
       0.15,
     )
 

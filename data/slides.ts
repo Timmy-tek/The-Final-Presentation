@@ -471,7 +471,7 @@ export const oops = {
 
 export const aprVsOct = {
   april: { label: 'April', traits: ['UI designer', 'Solo builder', 'Curious'] },
-  october: { label: 'October', traits: ['Full-stack developer', 'Team collaborator', 'Confident'] },
+  october: { label: 'October', traits: ['Full-stack developer', 'Team collaborator', 'Still Curious'] },
   /** Use plain numbers for count-up. Anything in [BRACKETS] shows as a placeholder. */
   stats: [
     { value: '6', suffix: '', label: 'months' },
@@ -485,18 +485,31 @@ export const aprVsOct = {
 /* Thanks                                                               */
 /* ------------------------------------------------------------------ */
 
+let body = "(comman beat me)\n I won't say much here, because we are going to def fight this semester. \n He's someone I love arguing withy, just for the sake of challenging him ";
 export const gratitude = {
   label: 'Thank you.',
   card: { title: 'TO EVERYONE', body: "You guys def made me feel special.💙" },
   people: [
-    { role: '[MANAGER]', note: 'Excellence', src: '/images/people/manager.jpg' },
-    { role: '[HR]', note: 'Discipline', src: '/images/people/HR.jpg' },
-    { role: '[SUPERVISOR]', note: 'Php and everything in between', src: '/images/people/supervisor.jpg' },
-    { role: '[MARKETING LEAD]', note: ' ', src: '/images/people/market.jpg' },
-    { role: '[FELLOW INTERNS]', note: ' ', src: '/images/people/interns.jpg' },
-    { role: '[BOOTCAMP STUDENTS]', note: ' ', src: '/images/people/students.jpg' },
-    { role: '[STUDENTS]', note: ' ', src: '/images/people/students2.jpg' },
-    { role: '[INTERNS]', note: ' ', src: '/images/people/family.jpg' },
+    { role: '[MANAGER]', note: '', src: '/images/people/manager.jpg' },
+    { role: '[HR]', note: '', src: '/images/people/HR.jpg' },
+    { role: '[SUPERVISOR]', note: '', src: '/images/people/supervisor.jpg' },
+    { role: '[MARKETING LEAD]', note: '', src: '/images/people/market.jpg' },
+    { role: '[FELLOW INTERNS]', note: '', src: '/images/people/interns.jpg' },
+    { role: '[BOOTCAMP STUDENTS]', note: '', src: '/images/people/students.jpg' },
+    { role: '[STUDENTS]', note: '', src: '/images/people/students2.jpg' },
+    { role: '[INTERNS]', note: '', src: '/images/people/family.jpg' },
+  ],
+  gallery: [
+    { title: "Poli ( in timothy's voice )", body: " ( Christopher once called me a 'Rich Kid', and for some reasons I don't understand, i felt uncomfortable.)\n Prolly the one with the biggest growth curve here. 💪💪\n He's someone who's really conscious about learning stuff he doesn't know.✨✨And he also has a Music Career. 😅", src: '/images/people/Poli.jpg', x: -200, y: 100, rot: -2 },
+    { title: 'Mr Femi', body: "Honestly, You're someone I didn't quite figure out. 😂😂\nBoth your entrance and disappearance was very Dramatic.😂😂\n You are that guy wey actually Sabi but he go call you 'BOSS'... like WTH Man?? 😅", src: '/images/people/fav-9.jpg', x: 300, y: -100, rot: 0 },
+    { title: 'Israelsilver', body: "Bro is BUFF. YES.\n (or I'm just intimidated by his well sculptured biceps and overall physical attractiveness 🤦🏾‍♂️ ).\nAwesome guy. Weird School 😅. Definitely not fading his Growth. About the shortest time spent together. You'll be missed Man. 🥹", src: '/images/people/Israel.jpg', x: -180, y: 110, rot: 15 },
+    { title: 'Mr Heskay', body: "The Enemies you know... 😂\n Not into football, but because of him, I was happy Messi didn't win the cup. 🤣🤣🤣🤣\n All my weekly presentations were done with the sole purpose of 'putting pepper in his eyes'🌶️🤣\n still... we all missed him. \n( of course I didn't 🌚)", src: '/images/people/Heskay.png', x: -240, y: 60, rot: -7 },
+    { title: 'Mr Abel', body: "Our Ancestors... To whom Honor is Due... I greet you sir. 🙌\nFor starters, You were wayy out of our league, yet you made such a great example of a Good leader we all somewhat came to love you. 🌚\nI mean... Thanks man.⭐⭐\n(winning thursday games brought me Great joy 🌚) ", src: '/images/people/Abel.png', x: -70, y: 50, rot: 10 },
+    { title: 'Hot Boy Kenni', body: "(I got the name right 🌚)\n First friend I made here.\n Mathematician - turned -tech bro.\nHe's what you'll call an excellent Individual. Prolly the most interesting fellow I've ever met ( especially when Ronaldo is being dissed. 😂😂).\nKenni Believes STRONGLY in Himself you def shouldn't go against him. 🔥", src: '/images/people/Mr Kenni.png', x: 56, y: 0, rot: -10 },
+    { title: 'Mr Peace', body: "Peace Emmie Innovations himself. 🙂‍↕️🙌🙌\nCalm. Gentle. Might even be the most quiet here 🌚 - Until bro speak and you realize his thinking has Ascended. 😅\nI love his Business mentality, and the fact that though first glace might not seem so, he knows a Lott. Big ups man. 🙌", src: '/images/people/Peace.jpg', x: 0, y: 0, rot: 0 },
+    { title: 'Mr Joshua', body: "Reserved? def Not. 😅😅\nHe is someone who looks like he spends considerable time thinking before he speaks. Then again, Bro speaks with a lot of  Wisdom. ✨✨✨‍️\nI love the fact that though few, your words are very thoughtful. I'm honored to have you as a friend. ✨", src: '/images/people/Joshua.png', x: 100, y: -100, rot: 5 },
+    { title: '🌸Miss Goodnews🌸', body: "Defying age... Defying gender... 🙂‍↕️🔥🔥🔥\nShe is someone very Capable at a lott ( ps. I still regret I didn't get to eat at the hangout 🤦🏾‍♂️)\n And YES, in the whole of App devs, your work stands out.🔥🔥😏\nAlso, conversations with you were sooo Peak. 👌✨✨", src: '/images/people/Goodnews.png', x: -100, y: -200, rot: -5 },
+    { title: 'CAPTAIN MARVEL 🦸‍♂️', body: "(comman beat me 🌚)\nI won't say much here, as my words WILL be used against me in our next fight. 😌\n He's someone I love arguing with for the sake of it. 😌😌\n He's also someone who is Growing ✨, and very excited about it ( his stature 😏).  Rooting for you mate.", src: '/images/people/Marv.jpg', x: 100, y: -200, rot: 0 },
   ],
 }
 

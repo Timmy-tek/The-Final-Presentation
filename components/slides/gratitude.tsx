@@ -44,6 +44,53 @@ export function GratitudeSlide() {
           <Polaroid src={p.src} caption={p.role} note={p.note} w={230} ratio={1} tapeRot={i % 2 ? 6 : -5} alt={p.role} />
         </Sticker>
       ))}
+
+      {/* Gallery Stack */}
+      <div className="absolute inset-0 flex items-center justify-center pt-[100px]">
+        <div className="relative w-[1000px] h-[550px]">
+          {gratitude.gallery?.map((item: any, i: number) => {
+            const x = item.x ?? 0
+            const y = item.y ?? 0
+            const rot = item.rot ?? 0
+
+            return (
+              <div
+                key={i}
+                data-anim="block"
+                data-step={i + 1}
+                data-rot={rot}
+                className="absolute inset-0 bg-[#F9F7F2] border-[15px] border-white shadow-2xl flex p-10 gap-10"
+                style={{
+                  translate: `${x}px ${y}px`,
+                  zIndex: 100 + i,
+                }}
+              >
+                {/* Image Side */}
+                <div className="w-[45%] h-full bg-ink/5 border border-ink/10 overflow-hidden relative">
+                  <img
+                    src={item.src}
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
+                  {/* Decorative corner */}
+                  <div className="absolute top-0 right-0 w-8 h-8 bg-white/20 rotate-45 translate-x-4 -translate-y-4" />
+                </div>
+
+                {/* Content Side */}
+                <div className="w-[55%] flex flex-col justify-center">
+                  <h3 className="font-display text-[35px] leading-[1.1] text-ink mb-6 tracking-tight">
+                    {item.title}
+                  </h3>
+                  <div className="w-16 h-1 bg-yellow mb-8" />
+                  <p className="font-hand text-[36px] leading-[1.3] text-ink/80 italic" style={{ whiteSpace: 'pre-line' }}>
+                     {item.body}
+                  </p>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </div>
     </Slide>
   )
 }
